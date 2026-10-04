@@ -18,7 +18,7 @@ const STRINGS = isTurkish
       invalidBody: "Paylaşan kişiden bağlantıyı yeniden göndermesini isteyebilirsin.",
       openInApp: "Flok'ta aç",
       getApp: "App Store'dan indir",
-      joinWaitlist: "Ön kayıt ol",
+      joinWaitlist: "Ön kayıt oluştur",
       hint: "Flok yüklüyse bağlantı doğrudan uygulamada açılır.",
       hostedBy: (name) => `${name} düzenliyor`,
     }
