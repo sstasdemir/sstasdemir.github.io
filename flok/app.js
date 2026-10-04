@@ -1,6 +1,7 @@
 const SUPABASE_URL = "https://tjjvwredykszmvtayvbg.supabase.co";
 const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_NsuxM_8f5b2oHIG3TXOmTg_xAU7DAzR";
 const APP_STORE_URL = "";
+const WAITLIST_URL = "https://sstasdemir.github.io/flok-site/#on-kayit";
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 const isTurkish = (navigator.language || "en").toLowerCase().startsWith("tr");
@@ -17,7 +18,7 @@ const STRINGS = isTurkish
       invalidBody: "Paylaşan kişiden bağlantıyı yeniden göndermesini isteyebilirsin.",
       openInApp: "Flok'ta aç",
       getApp: "App Store'dan indir",
-      comingSoon: "Yakında App Store'da",
+      joinWaitlist: "Ön kayıt ol",
       hint: "Flok yüklüyse bağlantı doğrudan uygulamada açılır.",
       hostedBy: (name) => `${name} düzenliyor`,
     }
@@ -32,7 +33,7 @@ const STRINGS = isTurkish
       invalidBody: "Ask the person who shared it to send it again.",
       openInApp: "Open in Flok",
       getApp: "Download on the App Store",
-      comingSoon: "Coming soon to the App Store",
+      joinWaitlist: "Join the waitlist",
       hint: "If Flok is installed, the link opens straight in the app.",
       hostedBy: (name) => `Hosted by ${name}`,
     };
@@ -166,8 +167,8 @@ function setUpActions() {
     storeButton.textContent = STRINGS.getApp;
     storeButton.href = APP_STORE_URL;
   } else {
-    storeButton.textContent = STRINGS.comingSoon;
-    storeButton.setAttribute("aria-disabled", "true");
+    storeButton.textContent = STRINGS.joinWaitlist;
+    storeButton.href = WAITLIST_URL;
   }
   document.querySelector(".hint").textContent = STRINGS.hint;
 }

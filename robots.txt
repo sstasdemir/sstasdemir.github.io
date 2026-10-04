@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sstasdemir.github.io/flok-site/sitemap.xml
